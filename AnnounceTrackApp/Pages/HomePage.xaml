@@ -1,0 +1,13 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AnnounceTrackApp.Pages.HomePage"
+             Title="Home"
+             BackgroundColor="White">
+
+    <VerticalStackLayout Padding="20">
+        <Label Text="You are now logged in!"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

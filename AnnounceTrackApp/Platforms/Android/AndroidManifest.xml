@@ -1,6 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true"></application>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.strawhatgames.announcetrack">
+	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:supportsRtl="true">
+		<!-- Main MAUI Activity with correct intent filter -->
+		<activity android:name="com.microsoft.maui.MauiAppCompatActivity" android:exported="true" android:theme="@style/Maui.SplashTheme">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="com.googleusercontent.apps.835284169131-7br7p2df486hh6oov03u0akb619cg069" />
+			</intent-filter>
+		</activity>
+	</application>
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
 </manifest>
