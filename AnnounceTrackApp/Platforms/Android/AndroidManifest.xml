@@ -7,7 +7,7 @@
 				<action android:name="android.intent.action.VIEW" />
 				<category android:name="android.intent.category.DEFAULT" />
 				<category android:name="android.intent.category.BROWSABLE" />
-				<data android:scheme="com.googleusercontent.apps.835284169131-7br7p2df486hh6oov03u0akb619cg069" />
+				<data android:scheme="com.googleusercontent.apps.835284169131-0o9ns48b9h5h6iq7uqbiqbrlob4dd0a2" />
 			</intent-filter>
 		</activity>
 	</application>

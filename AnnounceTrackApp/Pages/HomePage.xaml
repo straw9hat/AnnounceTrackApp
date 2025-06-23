@@ -4,10 +4,31 @@
              Title="Home"
              BackgroundColor="White">
 
-    <VerticalStackLayout Padding="20">
-        <Label Text="You are now logged in!"
-               FontSize="24"
+    <VerticalStackLayout Padding="30" Spacing="20" VerticalOptions="Center">
+
+        <Label Text="Welcome to AnnounceTrack!"
+               FontSize="28"
                FontAttributes="Bold"
                HorizontalOptions="Center" />
+
+        <Button Text="View Saved Interests"
+                Clicked="OnViewInterestsClicked"
+                BackgroundColor="#2196F3"
+                TextColor="White"
+                Padding="10,5"
+                CornerRadius="10"
+                HorizontalOptions="Center" />
+
+        <Label Text="You are now signed in."
+               FontSize="18"
+               HorizontalOptions="Center" />
+
+        <Button Text="Log out"
+                Clicked="OnLogoutClicked"
+                BackgroundColor="Red"
+                TextColor="White"
+                CornerRadius="10"
+                Padding="10,5"
+                HorizontalOptions="Center" />
     </VerticalStackLayout>
 </ContentPage>

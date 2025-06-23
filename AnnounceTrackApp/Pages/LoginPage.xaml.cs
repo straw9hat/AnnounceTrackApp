@@ -17,11 +17,11 @@ public partial class LoginPage : ContentPage
         {
             var authResult = await WebAuthenticator.Default.AuthenticateAsync(
                 new Uri("https://accounts.google.com/o/oauth2/v2/auth?" +
-                        "client_id=835284169131-7br7p2df486hh6oov03u0akb619cg069&" +
-                        "redirect_uri=com.googleusercontent.apps.835284169131-7br7p2df486hh6oov03u0akb619cg069:/oauth2redirect&" +
+                        "client_id=835284169131-0o9ns48b9h5h6iq7uqbiqbrlob4dd0a2&" +
+                        "redirect_uri=com.googleusercontent.apps.835284169131-0o9ns48b9h5h6iq7uqbiqbrlob4dd0a2:/oauth2redirect&" +
                         "response_type=code&" +
                         "scope=openid%20email%20profile"),
-                new Uri("com.googleusercontent.apps.835284169131-7br7p2df486hh6oov03u0akb619cg069:/oauth2redirect"));
+                new Uri("com.googleusercontent.apps.835284169131-0o9ns48b9h5h6iq7uqbiqbrlob4dd0a2:/oauth2redirect"));
 
             var code = authResult?.Properties["code"];
             if (code != null)
@@ -50,9 +50,9 @@ public partial class LoginPage : ContentPage
         var content = new FormUrlEncodedContent(new[]
         {
             new KeyValuePair<string, string>("code", code),
-            new KeyValuePair<string, string>("client_id", "835284169131-7br7p2df486hh6oov03u0akb619cg069"),
+            new KeyValuePair<string, string>("client_id", "835284169131-0o9ns48b9h5h6iq7uqbiqbrlob4dd0a2"),
             new KeyValuePair<string, string>("client_secret", "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"),
-            new KeyValuePair<string, string>("redirect_uri", "com.googleusercontent.apps.835284169131-7br7p2df486hh6oov03u0akb619cg069:/oauth2redirect"),
+            new KeyValuePair<string, string>("redirect_uri", "com.googleusercontent.apps.835284169131-0o9ns48b9h5h6iq7uqbiqbrlob4dd0a2:/oauth2redirect"),
             new KeyValuePair<string, string>("grant_type", "authorization_code"),
         });
 
