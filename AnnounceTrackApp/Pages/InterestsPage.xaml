@@ -7,43 +7,63 @@
     <VerticalStackLayout Padding="20" Spacing="20">
 
         <Label Text="Your Saved Interests"
-               FontSize="24"
-               FontAttributes="Bold"
-               HorizontalOptions="Center" />
+           FontSize="24"
+           FontAttributes="Bold"
+           HorizontalOptions="Center" />
 
-        <CollectionView x:Name="InterestList">
+        <CollectionView x:Name="InterestList"
+                IsGrouped="True">
+
+            <CollectionView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Category}" 
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   Padding="5"
+                   BackgroundColor="#E0E0E0"
+                   TextColor="Black" />
+                </DataTemplate>
+            </CollectionView.GroupHeaderTemplate>
+
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <HorizontalStackLayout Spacing="10" Padding="5">
-                        <Label Text="{Binding}" 
-                       FontSize="18" 
-                       VerticalOptions="CenterAndExpand"
+                        <Label Text="{Binding Name}" 
+                       FontSize="18"
                        HorizontalOptions="StartAndExpand" />
 
                         <Button Text="Remove"
                         BackgroundColor="Red"
                         TextColor="White"
-                        Padding="5"
                         FontSize="14"
+                        Padding="4"
                         Command="{Binding Source={x:Reference InterestList}, Path=BindingContext.RemoveCommand}"
                         CommandParameter="{Binding}" />
                     </HorizontalStackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
+
         </CollectionView>
+
+
 
         <HorizontalStackLayout Spacing="10">
             <Entry x:Name="InterestEntry"
-                   Placeholder="Add new interest..."
-                   FontSize="16"
-                   HorizontalOptions="FillAndExpand" />
+               Placeholder="Add new interest..."
+               FontSize="16"
+               HorizontalOptions="FillAndExpand" />
+
+            <Picker x:Name="CategoryPicker"
+                WidthRequest="140"
+                Title="Category" />
 
             <Button Text="Add"
-                    Clicked="OnAddInterestClicked"
-                    BackgroundColor="#4CAF50"
-                    TextColor="White"
-                    Padding="10,5" />
+                Clicked="OnAddInterestClicked"
+                BackgroundColor="#4CAF50"
+                TextColor="White"
+                Padding="10,5" />
         </HorizontalStackLayout>
 
     </VerticalStackLayout>
+
 </ContentPage>
